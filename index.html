@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Prework Study Guide</title>
   </head>
+  
   <body>
     <header id="top">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
     </header>
+    
     <main>
       <section class="card" id="html-section">
         <h2>HTML</h2>
@@ -21,64 +24,94 @@
               <li>'meta charset="UTF-8"'</li>
               <li>'meta http-equiv="X-UA-Compatible" content="IE=edge"' - This may not be needed.</li>
               <li>'meta name="viewport" content="width=device-width, initial-scale=1.0"'' </li>
+              <li>'link rel="stylesheet" href="./path/to/file.css"' - This will link a CSS sheet to this HTML page</li>
               <li> '>title *** /title<'</li>
             </ul>
           <li>The body element represents the visible content shown to the user.</li>
             <ul>
               <li>'header id="top"'</li>
               <li>'section class="card" id="*section title*'</li>
+              <li>Adding a 'class="name"' to a section allows you to isolate that segment in CSS</li>
               <li>'h1-h6'</li>
               <li>'ul, ol with id elements'</li>
+              
             </ul>
         </ul>
       </section>
+      
       <section class="card" id="css-section">
-        <section class="card" id="css-section">
-          <h2>CSS</h2>
+        <h2>CSS</h2>
+        <ul>
+          <li>Each CSS element has two parts</li>
           <ul>
-            <li>CSS Notes TBD</li>
+            <li>Selector - Defines the element or attribute to appply the decloration to</li>
+            <li>Declaration</li>
+            <ul>
+              <li>Property - what we are affecting (ie. color, font size)</li>
+              <li>Value - what we are setting the property to</li>
+            </ul>
           </ul>
-        </section>
+          <li>CSS Elements</li>
+          <ul>
+            <li>CSS elements are formated as 'Selector, selector2 {property: value; property2: value2}'</li>
+            <li>* - A selector which will apply to all elements on the page</li>
+            <li>Margin - border around the page</li>
+            <li>Padding - border around the content</li>
+            <li>Text align</li>
+            <li>Width</li>
+            <li>Height</li>
+            <li>Color</li>
+            <li>Background color</li>
+            <li>Border</li>
+            <li>Box-shadow</li>
+            <li>'.card {' allows you to specify a particular class in the HTML file to modify</li>
+            <li>Display</li>
+            <ul>
+              <li>Block - will obey width and height properties. Padding, margin and border will cause other elements to be pushed away from itself.</li>
+              <li>Inline - Will not apply width and height - Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box. 
+                Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box. </li>
+              <li>Flex - The element will still use the outer display type block but this changes the inner display type to flex. 
+                Any direct children of this box will become flex items and behave according to the Flexbox specification.</li>
+          </ul>
+        </ul>
       </section>
+      
       <section class="card" id="git-section">
-        <section class="card" id="git-section">
-          <h2>Git</h2>
-          <ul>
-            <li>Some commands are not git, but for navigating the Terminal/GitBash</li>
-              <ul>
-                <li>ls: command to view all files in current folder</li>
-                <li>cd folder-name: command to move into a new folder</li>
-                <li>ls ..: command to view files in parent folder</li>
-                <li>cd ..: command to move into parent folder</li>
-                <li>pwd: check current directory</li>
-                <li>mkdir: create a new directory</li>
-                <li>touch file-name: creatue a new file</li>
-                <li>start file-name: open selected file</li>
-              </ul>  
-            <li>Other commands are specific for git. These all must begin with 'git'</li>
-              <ul>
-                <li>git status: checks what branch we are currently on</li>
-                <li>git checkout branch-name: switch to listed branch </li>
-                <li>git checkout -b branch-name: creates a new branch and switches to it</li>
-                <li>git pull origin branch-name: updates files to the most recent version of that branch</li>
-                  <ul>
-                    <li>pull: retrieve branch modifications to local environment</li>
-                    <li>origin: the source of the pull is GitHub repo</li>
-                  </ul>
-                <li>git add -A: add all of the changes made to files to the branch staging area </li>
-                <li>git commit -m "details here": commit staging area files to local repo with an imperative command description</li>
-                <li>git push origin branch-name: push the local branch changes to GitHub repo</li>
-              </ul>
-          </ul>
-        </section>
+        <h2>Git</h2>
+        <ul>
+          <li>Some commands are not git, but for navigating the Terminal/GitBash</li>
+            <ul>
+              <li>ls: command to view all files in current folder</li>
+              <li>cd folder-name: command to move into a new folder</li>
+              <li>ls ..: command to view files in parent folder</li>
+              <li>cd ..: command to move into parent folder</li>
+              <li>pwd: check current directory</li>
+              <li>mkdir: create a new directory</li>
+              <li>touch file-name: creatue a new file</li>
+              <li>start file-name: open selected file</li>
+            </ul>  
+          <li>Other commands are specific for git. These all must begin with 'git'</li>
+            <ul>
+              <li>git status: checks what branch we are currently on</li>
+              <li>git checkout branch-name: switch to listed branch </li>
+              <li>git checkout -b branch-name: creates a new branch and switches to it</li>
+              <li>git pull origin branch-name: updates files to the most recent version of that branch</li>
+                <ul>
+                  <li>pull: retrieve branch modifications to local environment</li>
+                  <li>origin: the source of the pull is GitHub repo</li>
+                </ul>
+              <li>git add -A: add all of the changes made to files to the branch staging area </li>
+              <li>git commit -m "details here": commit staging area files to local repo with an imperative command description</li>
+              <li>git push origin branch-name: push the local branch changes to GitHub repo</li>
+            </ul>
+        </ul>
       </section>
+
       <section class="card" id="javascript-section">
-        <section class="card" id="javascript-section">
-          <h2>JavaScript</h2>
-          <ul>
-            <li>JavaScript notes TBD</li>
-          </ul>
-        </section>
+        <h2>JavaScript</h2>
+        <ul>
+          <li>JavaScript notes TBD</li>
+        </ul>
       </section>
     </main>
 
